@@ -20,6 +20,7 @@ func newTemplate(impl implement) *template {
 		implement: impl,
 	}
 }
+
 type implement interface {
 	PrivateOperation1()
 	PrivateOperation2()
