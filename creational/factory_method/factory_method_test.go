@@ -6,12 +6,14 @@ import (
 )
 
 func TestFactoryMethod(t *testing.T) {
-	wf := &WinButtonFactory{}
+	var factory ButtonFactory
+	var btn Button
+	factory = &WinButtonFactory{}
 
-	btn := wf.CreateButton()
+	btn = factory.CreateButton()
 	fmt.Println(btn.Show())
 
-	mf := &MacButtonFactory{}
-	btn = mf.CreateButton()
+	factory = &WinButtonFactory{}
+	btn = factory.CreateButton()
 	fmt.Println(btn.Show())
 }
