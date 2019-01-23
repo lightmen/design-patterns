@@ -1,6 +1,5 @@
 package decorator
 
-
 type Component interface {
 	Calc() int
 }
